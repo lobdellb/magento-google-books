@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+    <global>
+
+	    <models>
+		    <bookinfo>
+			    <class>Textalt_Bookinfo_Model</class>
+			    <resourceModel>bookinfo_mysql4</resourceModel>
+		    </bookinfo>
+
+		    <bookinfo_mysql4>
+        		<class>Textalt_Bookinfo_Model_Mysql4</class>
+		        <entities>
+		        	<bookinfo>
+			        	<table>bookinfo_data</table>
+			        </bookinfo>
+		        </entities>
+	      	</bookinfo_mysql4>
+
+	    </models>
+
+
+	    <!--events>
+
+		    <controller_front_init_before>
+
+			    <observers>
+				      <bookinfo>
+					        <type>singleton</type>
+					        <class>bookinfo/some_observer</class>
+					        <method>go</method>
+				      </bookinfo>
+			    </observers>
+
+	      	</controller_front_init_before>
+
+	    </events-->
+
+	    <resources>
+	        <bookinfo_setup>
+		        <setup>
+		            <module>Textalt_Bookinfo</module>
+		        </setup>
+		        <connection>
+		            <use>core_setup</use>
+		        </connection>
+	        </bookinfo_setup>
+
+		    <bookinfo_write>
+		        <connection>
+		            <use>core_write</use>
+		        </connection>
+		    </bookinfo_write>
+
+		    <bookinfo_read>
+		        <connection>
+		            <use>core_read</use>
+		        </connection>
+		    </bookinfo_read>    
+        </resources>
+	    
+	    <helpers>
+		    <bookinfo>
+		        <class>Textalt_Bookinfo_Helper</class>
+		    </bookinfo>
+	    </helpers>
+	    
+	    <!--blocks>
+		    <bookinfo>
+		        <class>Textalt_Bookinfo_Block</class>
+		    </bookinfo>
+	    </blocks-->
+	 
+    </global>
+
+
+    <modules>
+        <Textalt_Bookinfo>
+            <version>0.3.0</version>
+        </Textalt_Bookinfo>
+    </modules>
+    
+    
+    
+    <!--frontend>
+        <routers>
+            <bookinfo>
+                <use>standard</use>
+                <args>
+                    <module>Textalt_Bookinfo</module>
+                    <frontName>bookinfo</frontName>
+                </args>
+            </bookinfo>
+        </routers>
+
+
+        <layout>
+            <updates>
+                <bookinfo>
+                    <file>bookinfo.xml</file>
+                </bookinfo>
+            </updates>
+        </layout>
+
+    </frontend-->
+    
+    
+    <!--admin>
+        <routers>
+            <bookinfo>
+                <use>admin</use>
+                <args>
+                    <module>Textalt_Bookinfo</module>
+                    <frontName>bookinfo</frontName>
+                </args>
+            </bookinfo>
+        </routers>
+    </admin-->
+    
+
+    <!--adminhtml>
+	    <layout>
+	        <updates>
+	            <bookinfo>
+		            <file>bookinfo.xml</file>
+	            </bookinfo>
+	        </updates>
+	    </layout>
+    </adminhtml-->
+
+
+
+</config>

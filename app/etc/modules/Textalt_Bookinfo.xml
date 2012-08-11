@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Textalt_Bookinfo>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Textalt_Bookinfo>
+    </modules>
+</config>
